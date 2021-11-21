@@ -5,6 +5,7 @@ CREATOR - REENPHY GEORGE
 TITLE - Binary Search
 
 DATE - 11th NOVEMBER, 2021
+
 ***********************************************************/
 
 #include<stdio.h>
@@ -16,7 +17,7 @@ int main()
   scanf("%d" , &n);
   int arr[n];
 
-  //Array should be sorted//
+  // Array should be sorted //
   for(int i=0 ; i<n ; i++)
   {
     printf("Enter the %dth element of array: ",i);
@@ -25,7 +26,7 @@ int main()
   printf("\nEnter the element to be searched: ");
   scanf("%d" , &x);
 
-  //Sorting//
+  // Searching //
   int left=0 , right=n-1 , mid=(left+right)/2;
   while(left<=right)
   {

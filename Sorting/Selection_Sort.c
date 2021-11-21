@@ -5,12 +5,14 @@ CREATOR - REENPHY GEORGE
 TITLE - Selection Sort
 
 DATE - 11th NOVEMBER, 2021
+
 ***********************************************************/
 
 #include<stdio.h>
 
 int main()
 {
+    // Input //
     int n;
     printf("Enter the total size of array: ");
     scanf("%d" , &n);
@@ -20,7 +22,7 @@ int main()
         printf("Enter the %dth element: " , i);
         scanf("%d" , &arr[i]);
     }
-    // Sorting
+    // Sorting //
     int l;
     for(int i=0 ; i<n ; i++)
     {
@@ -39,7 +41,7 @@ int main()
             arr[l] = temp;
         }
     }
-    // Printing Sorted Array
+    // Printing Sorted Array //
     printf("\nSorted Array: ");
     for(int i=0 ; i<n ; i++)
     {

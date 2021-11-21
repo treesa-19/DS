@@ -5,12 +5,15 @@ CREATOR - REENPHY GEORGE
 TITLE - Linear Search
 
 DATE - 11th NOVEMBER, 2021
+
 ***********************************************************/
 
 #include<stdio.h>
 
 int main()
 {
+    
+  // Input //
   int n;
   printf("Enter the size of array: ");
   scanf("%d" , &n);
@@ -27,6 +30,7 @@ int main()
   int x , loc = -1;
   scanf("%d" , &x);
 
+  // Searching //
   for(int i=0 ; i<n ; i++)
   {
     if(arr[i] == x)
