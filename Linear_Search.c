@@ -2,7 +2,7 @@
 
 CREATOR - REENPHY GEORGE
 
-TITLE - Linear Sort
+TITLE - Linear Search
 
 DATE - 11th NOVEMBER, 2021
 ***********************************************************/
