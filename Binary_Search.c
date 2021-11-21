@@ -2,7 +2,7 @@
 
 CREATOR - REENPHY GEORGE
 
-TITLE - Binary Sort
+TITLE - Binary Search
 
 DATE - 11th NOVEMBER, 2021
 ***********************************************************/
