@@ -14,7 +14,7 @@ int main()
 {
     
   // Input //
-  int n,count=0,i,space=12;
+  int n,count=0,i,space=16;
   printf("Enter the size of array: ");
   scanf("%d" , &n);
   space += (n*4);
