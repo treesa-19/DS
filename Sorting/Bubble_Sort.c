@@ -13,33 +13,43 @@ DATE - 11th NOVEMBER, 2021
 int main()
 {
     // Input //
-    int n;
+    int n , count=0, i, j, temp, space=24;
     printf("Enter the total size of array: ");
     scanf("%d" , &n);
+    space += (n*4);
+    count++;
     int arr[n];
-    for(int i=0 ; i<n ; i++)
+    for(i=0 ; i<n ; i++)
     {
         printf("Enter the %dth element: " , i);
         scanf("%d" , &arr[i]);
+        count++;
     }
+    count++;
     // Sorting //
-    for(int i=0 ; i<n-1 ; i++)
+    for(i=0 ; i<n ; i++)
     {
-        for(int j=i+1 ; j<n ; j++)
+        for(j=0 ; j<n-i-1 ; j++)
         {
-            if(arr[i] > arr[j])
+            if(arr[j] > arr[j+1])
             {
-                int temp = arr[i];
-                arr[i] = arr[j];
-                arr[j] = temp;
+                temp = arr[j];
+                arr[j] = arr[j+1];
+                arr[j+1] = temp;
+                count += 3;
             }
         }
+        count++;
     }
+    count++;
     // Printing Sorted Array //
     printf("\nSorted Array: ");
-    for(int i=0 ; i<n ; i++)
+    for(i=0 ; i<n ; i++)
     {
         printf(" %d" , arr[i]);
     }
+    count++;
+    printf("\nSpace Complexity: %d", space);
+    printf("\nTime Complexity: %d", count);
     return 0;
 }

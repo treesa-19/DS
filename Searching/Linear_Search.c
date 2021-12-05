@@ -14,31 +14,39 @@ int main()
 {
     
   // Input //
-  int n;
+  int n,count=0,i,space=12;
   printf("Enter the size of array: ");
   scanf("%d" , &n);
+  space += (n*4);
   int arr[n];
   printf("Enter Array Elements:\n");
 
-  for(int i=0 ; i<n ; i++)
+  for(i=0 ; i<n ; i++)
   {
     printf("\nEnter the %dth element: " , i);
     scanf("%d" , &arr[i]);
+    count++;
   }
+  count++;
 
   printf("\nEnter the array element to be found: ");
   int x , loc = -1;
+  space += 8;
   scanf("%d" , &x);
+  count++;
 
   // Searching //
-  for(int i=0 ; i<n ; i++)
+  for(i=0 ; i<n ; i++)
   {
     if(arr[i] == x)
     {
       loc = i;
+      count++;
       break;
     }
+    count++;
   }
+  count++;
 
   if(loc != -1)
   {
@@ -48,6 +56,7 @@ int main()
   {
     printf("%d is not found" , x);
   }
-
+  printf("\nSpace Complexity: %d", space);
+  printf("\nTime Complexity: %d", count);
   return 0;
 }
