@@ -25,7 +25,7 @@ void push(int arr[] , int item , int *top , int n)
 }
 
 // Remove an element from top //
-void pop(int arr[] , int *top , int n)
+void pop(int arr[] , int *top)
 {
     if(*top == -1)
     {
@@ -84,7 +84,7 @@ int main()
                 push(arr , item , &top , n);
                 break;
             case 2:
-                pop(arr , &top , n);
+                pop(arr , &top);
                 break;
             case 3:
                 peek(arr , top);
@@ -98,4 +98,5 @@ int main()
                 printf("\nWrong choice...Try Again\n"); 
         }
     }
+    return 0;
 }
