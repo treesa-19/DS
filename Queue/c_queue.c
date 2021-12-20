@@ -1,3 +1,13 @@
+/***********************************************************
+
+CREATOR - REENPHY GEORGE
+
+TITLE - Circular Queue
+
+DATE - 20th DECEMBER, 2021
+
+***********************************************************/
+
 #include<stdio.h>
 
 int isFull(int *front, int *rear, int n)
