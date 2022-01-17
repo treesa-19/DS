@@ -34,13 +34,14 @@ void add(int item)
 
 void remove_end()
 {
-	while(temp->next->next != NULL)
+	temp = head;
+	while(temp->next != NULL)
 	{
+		temp2 = temp;
 		temp = temp->next;
 	}
-	//temp2 = temp-> next;
-	temp->next = NULL;
-	//free(temp2);
+	temp2 -> next = NULL;
+	free(temp);
 }
 
 void display()
@@ -56,26 +57,26 @@ void display()
 int main()
 {
 	int item;
-	char ch;
+	int ch;
 	while(ch != 4)
     {
         printf("\nMenu\n1. Insert\n2. Remove\n3. Display\n4. Exit\nEnter your choice: ");
-        scanf("%c" , &ch);
+        scanf("%d" , &ch);
 
         switch(ch)
         {
-            case '1':
+            case 1:
                 printf("\nEnter the item: ");
                 scanf("%d" , &item);
                 add(item);
                 break;
-            case '2':
+            case 2:
                 remove_end();
                 break;
-            case '3':
+            case 3:
                 display();
                 break;
-            case '4':
+            case 4:
                 break;
             default:
                 printf("\nWrong choice...Try Again\n"); 
