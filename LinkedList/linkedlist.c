@@ -1,3 +1,12 @@
+/***********************************************************
+
+CREATOR - REENPHY GEORGE
+
+TITLE - LinkedList
+
+DATE - 31st January, 2022
+
+***********************************************************/
 #include<stdio.h>
 #include<stdlib.h>
 
