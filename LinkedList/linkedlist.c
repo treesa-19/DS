@@ -8,6 +8,7 @@ struct node
 };
 
 struct node *head, *newnode, *temp, *temp2;
+int empty = 1;
 
 void add(int item)
 {
@@ -17,7 +18,8 @@ void add(int item)
 	if(head == NULL)
 	{
 		head = newnode;
-		newnode->next = NULL;	
+		newnode->next = NULL;
+		empty = 0;	
 	}
 	
 	else
@@ -34,18 +36,39 @@ void add(int item)
 
 void remove_end()
 {
+	if(empty == 1) 
+	{
+		printf("\nLinkedlist is empty...\n");
+		return;
+	}
 	temp = head;
+	int data;
+	if(head->next == NULL) {
+		data = head->data;
+		free(head);
+		printf("\nData removed: %d\n",data);
+		empty = 1;
+		return;
+	}
 	while(temp->next != NULL)
 	{
 		temp2 = temp;
 		temp = temp->next;
 	}
 	temp2 -> next = NULL;
+	data = temp->data;
 	free(temp);
+	printf("Data removed: %d",data);
+	return;
 }
 
 void display()
 {
+	if(empty == 1) 
+	{
+		printf("\nLinkedlist is empty...\n");
+		return;
+	}
 	temp = head;
 	while(temp != NULL)
 	{
